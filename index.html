@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>HREXT08 R00lz!</title>
+	<title>Donut Maker!</title>
 	<script
 		src="https://code.jquery.com/jquery-3.3.1.js"
 		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -14,16 +14,16 @@
 	<div class="container">
 		<form action="" method="" class="form">
 			<div class="form">
-				<label for="key">Enter key: </label>
+				<label for="key">Enter type of donut: </label>
 				<input type="text" name="key" id="key" required>
 			</div>
 			<div class="form">
-				<label for="value">Enter value: </label>
+				<label for="value">Enter topping (optional): </label>
 				<input type="text" name="value" id="value" required>
 			</div>
 			<div class="form">
-				<button class="button" id="btn-create" type="button">Create</button>
-				<button class="button" id="btn-update" type="button">Update</button>
+				<button class="button" id="btn-create" type="button">Make donut</button>
+				<button class="button" id="btn-update" type="button">Add toppings</button>
 				<button class="button" id="btn-delete" type="button">Delete</button>
 			</div>
 			<!-- clear button? -->
@@ -31,20 +31,19 @@
 		<table>
 			<thead>
 				<tr>
-					<th>Key</th>
-					<th>Value</th>
+					<th>Type of donut</th>
+					<th>toppings</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td>test key</td>
-					<td>test value</td>
+					<td></td>
+					<td></td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
-	<div id="statusLabel">Status:</div>
-
+	<div id="statusLabel">Response:</div>
 	<script src="app/app.js"></script>
   <!--
    table to view data

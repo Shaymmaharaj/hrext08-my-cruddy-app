@@ -8,8 +8,9 @@ var loadLocalStorage = function () {
 };
 
 var updateStatusLabel = function(message) {
-	$('#statusLabel').text('Status: ' + message);
+	$('#statusLabel').text('Response: ' + message);
 }
+ var weird = ['glass', 'salt', 'mayo', 'water']
 
  //jQuery document ready initialization stuff
  ////button and form event handlers
@@ -30,6 +31,11 @@ $(document).ready(function () {
 			createEntry(key, value);
 			updateStatusLabel('key created - ' + key);
 		}
+		if(weird.includes(value)){
+			updateStatusLabel('no dude thats wierd')
+		} else {
+			updateStatusLabel('Yum!!')
+		}
 
 		loadLocalStorage();
 	});
@@ -48,9 +54,13 @@ $(document).ready(function () {
 		} else if (key === '') {
 			updateStatusLabel('invalid input!')
 		} else {
-			updateStatusLabel('key doesn\'t exist, please use create button instead! :D');
+			updateStatusLabel('no donut, please use create button instead! :D');
 		}		
-		
+		if(weird.includes(value)){
+			updateStatusLabel('no dude thats wierd')
+		} else {
+			updateStatusLabel('Yum!!')
+		}
 		loadLocalStorage();		
 	});
 
@@ -67,17 +77,19 @@ $(document).ready(function () {
 		} else {
 			updateStatusLabel('key doesn\'t exist, nothing removed. :|');
 		}
+		if(weird.includes(value)){
+			updateStatusLabel('no dude thats wierd')
+		} else {
+			updateStatusLabel('Yum!!')
+		}
 
 		loadLocalStorage();
 	});	
 
+
 });
 /*
-
-
-
 When an input element is given a name, that name becomes a property of the owning form element's HTMLFormElement.elements property. That means if you have an input whose name is set to guest and another whose name is hat-size, the following code can be used:
-
 let form = document.querySelector("form");
 let guestName = form.elements.guest;
 let hatSize = form.elements["hat-size"];
